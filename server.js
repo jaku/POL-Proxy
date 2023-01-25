@@ -1,7 +1,4 @@
-//import * as dotenv from 'dotenv';
 import express from "express";
-
-//dotenv.config();
 
 import wildcard from './src/endpoints/wildcard.js';
 
@@ -16,3 +13,4 @@ app.listen(serverPort, () => {
 	console.log(`POL Proxy is running on port ${serverPort}`);
 });
 
+console.log("OK")
