@@ -3,7 +3,7 @@
 
 The FFXI PlayOnline Proxy is a simple way to bypass the annoying PlayOnline loading that has to happen before the game launches. This does not bypass POL or send anything off to 3rd party servers, it's completely self-contained and runs on your PC.
 
-Instead of reachingout out to the PlayOnline servers and getting the PML files from their server, we serving our own page directly from your PC. This page loads you directly into the game as soon as it loads. 
+Instead of reaching out to the PlayOnline servers and getting the PML files from their server, we serving our own page directly from your PC. This page loads you directly into the game as soon as it loads. 
 
 You can see how it works by checking out the video here. https://www.youtube.com/watch?v=SATgkzxw_ss
 
@@ -28,6 +28,7 @@ Note, that modifying this file, and not running the FFXI POL Proxy will prevent 
 ## Other
 
 That should be about it, if you have any issues let me know but this should be fairly clear. Again, remember to have the application running before logging into POL, you can technically close the program after logging in, but it uses little resources.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
