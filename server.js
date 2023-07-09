@@ -1,5 +1,4 @@
 import express from "express";
-
 import wildcard from './src/endpoints/wildcard.js';
 
 const serverPort = 51304;
@@ -12,5 +11,3 @@ app.use('*', wildcard);
 app.listen(serverPort, () => {
 	console.log(`POL Proxy is running on port ${serverPort}`);
 });
-
-console.log("OK")

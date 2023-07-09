@@ -5,7 +5,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "esbuild server.js --bundle --outfile=dist/server.js --platform=node --target=node16 --format=cjs",
+    "build": "pkg dist/server.js --out-path dist -t node16-win-x64"
   },
   "author": "jaku",
   "license": "MIT",
@@ -13,5 +15,9 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.4",
+    "pkg": "^5.8.0"
   }
 }

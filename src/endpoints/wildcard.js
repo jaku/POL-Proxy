@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get('/', async function(req, res, next) {
 	console.log("URL:", req.originalUrl)
-
+	
 	const response = await Util.getPOLRequest(req.originalUrl, req.headers);
 	if (response) {
 		let { authHeader, status, data, path } = response;
@@ -15,12 +15,9 @@ router.get('/', async function(req, res, next) {
 			res.header("www-authenticate", authHeader)
 		}
 
+		//this replaces the main page with our fast page which just loads the game
 		if (path === "/pml/main/index.pml") {
-			return res.status(status).render("ff11-index.ejs");
-		} else if (path === "/pml/game/ff11/index.pml?SC=0&PF=WIN" ) {
-			return res.status(status).render("ff11-index.ejs");
-		} else if (path === "/pml/game/ff11/index.pml?SC=1&PF=WIN" ) {
-			return res.status(status).render("ff11-index.ejs");
+			return res.status(status).send('<pml><head><meta http-equiv="Content-Type" content="text/x-playonline-pml;charset=UTF-8"><title>Fast</title></head><body><timer name="fast" href="gameto:1" enable="1" delay="0"></body></pml>');
 		} else {
 			return res.status(status).send(data);
 		}
@@ -28,9 +25,6 @@ router.get('/', async function(req, res, next) {
 		return res.send();
 	}
 
-
 });
-
-
 
 export default router;
