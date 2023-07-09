@@ -15,12 +15,15 @@ In order to bypass the login process, you need to modify your hosts file on Wind
 2) Select File->Open in notepad, and paste `C:\Windows\system32\drivers\etc\hosts` in the File name path, and press enter.
 3) Add a new entry of `127.0.0.1	wh000.pol.com` on a new line at the end of the file.
 4) Save
+####
+Once done with that, you'll need to download and run the POLProxy application. This will serve the page that will load you directly into the game.
 
+1) Download [POLProxy](https://github.com/jaku/POL-Proxy/releases/download/1.0.0/PolProxy.exe)
+2) Run the application, it will open a new window with the output of `POL Proxy is running on port 51304`.
 ####
 
-Note, that modify this file, and not running the FFXI POL Proxy will prevent your client from being able to connect. So if you want to revert, just follow the same steps as above, but remove the line you added.
+Note, that modifying this file, and not running the FFXI POL Proxy will prevent you from being able to connect to POL. If you no longer wish to use the POLProxy, just open the hosts file like before, and remove the line you added.
 
-Run POL-Proxy, it should open a new window with the output of `POL Proxy is running on port 51304`.
 
 ## Other
 
